@@ -16,44 +16,92 @@
 
 <body>
     <header>
-        <nav>
+        <h2>Love Findr</h2>
+        <div class="nav-menu">
+            <nav>
+                <div class="">
+                    <button class="btn header-btn">Log in</button>
+                    <button class="btn header-btn">Register</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="Personality">
+        <div class="greetings">
             <div class="previous-icon">
                 <i class="ri-arrow-left-line"></i>
             </div>
-        </nav>
-        <p class="header-p">
-            Base Name
-        </p>
-    </header>
+            <div class="Top-div pf-top">
+                <h2 class="header-p pf-header">
+                    PROFILE
+                </h2>
+            </div>
+        </div>
 
     <main>
-        <form action="post" class="main-form">
-            <div class="about-div">
-                <p>
-                    What's your Base name?
-                </p>
-            </div>
-            <div class="form-div">
-                <label for="Name">
-                    <input type="text" placeholder="Jude" class="form-input" required>
-                </label>
-                <p class="p3">This is how it'll appear on your profile.</p>
-            </div>
-        </form>
-        <div class="icon wallet-icon">
-            <a href="#" class="a wallet-a">
-                <div class="icon-list wallet-icon-list">
-                    <i class="ri-wallet-3-fill"></i>
-                    <span>Connect Wallet</span>
-                </div>
-            </a>
+        <div class="about-div pf-abt">
+            <p>
+                Kindly input your Profile details
+            </p>
         </div>
+        <form action="/Love findr/Dashboard.html" class="main-form">
+            <div class="form-div">
+                <label for="pic" id="pf-pic">
+                    <span>Upload your picture</span>
+                    <input type="file" name="pic" >
+                </label>
+                <label for="Name">
+                    <span>Full Name</span>
+                    <input name="Name" type="text" placeholder="Enter your full Name"
+                        class="form-input pf-input" >
+                </label>
+                <label for="Gender">
+                    <span>Gender</span>
+                    <select name="Gender" id="" class="form-input pf-input pf-select" >
+                        <option value="1">Select your Gender</option>
+                        <option value="2">Female</option>
+                        <option value="3">Male</option>
+                    </select>
+                </label>
+                <label for="DOB">
+                    <span>Date of Birth</span>
+                    <input name="DOB" type="date" class="form-input pf-input" >
+                </label>
+                <label for="Phone">
+                    <span>Phone Number</span>
+                    <input name="Phone" type="tel" placeholder="000000" class="form-input pf-input" >
+                </label>
+                <label for="Nationality">
+                    <span>Your Nationality</span>
+                    <input name="Nationality" type="text" placeholder="Enter your Nationality" class="form-input pf-input" >
+                </label>
+                <label for="Country">
+                    <span>Country of Residence</span>
+                    <input name="Country" type="text" placeholder="Enter the Country you live in" class="form-input pf-input" >
+                </label>
+                <label for="State">
+                    <span>State of residence</span>
+                    <input name="State" type="text" placeholder="Enter the state you live in" class="form-input pf-input" >
+                </label>
+            </div>
+            <div class="icon wallet-connect-btn">
+                <a href="#">
+                    <button class="icon-list pf-wallet">
+                        <i class="ri-facebook-circle-fill"></i>
+                        Connect your Base Wallet
+                    </button>
+                </a>
+            </div>
+            <div class="checked">
+                <input type="checkbox" name="" id="">
+                I agree to the Terms and Condition
+            </div>
+            <input type="submit" class="btn wide-btn">
+        </form>
     </main>
 
     <footer>
-        <a href="Gender.html" target="_self" class="a">
-            <div class="btn cont-btn personal-btn">Continue</div>
-        </a>
     </footer>
 
 </body>

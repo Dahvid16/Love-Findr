@@ -11,19 +11,81 @@
 }
 
 :root {
-    --trial1: rgba(128, 0, 128, .8);
-    --trial2: pink;
-    --trial3: rgb(236, 232, 232);
+    --bg1: #800080;
+    --bg2: #ffc0cb;
+    --bg3: rgb(236, 232, 232);
+    --btn-bg: #ad59ad;
+    --input-bg: rgb(250, 226, 234);
+    --loader-bg: rgb(114, 0, 114);
+    --border: #913e3e;
     --background1: rgb(253, 250, 250);
-    --background2: rgb(250, 226, 234);
-    --background3: #fc5252;
     --background4: rgba(243, 179, 179, 0.2);
-    --border: #ff6c6c;
-    --text-color1: #1f1e1e;
+    --text-color1: #f5f5f5;
+    --btn-txt-color: #f5f5f5;
     --text-color2: rgb(0, 0, 0);
-    --btn-color: #ffffff;
 }
 
+body {
+    background: url(Images/blurry-gradient-haikei\ \(1\).svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1.5rem 1rem;
+    color: var(--text-color1);
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+#Index {
+    height: 95vh;
+    margin-bottom: 00;
+}
+
+.btn {
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    height: 3rem;
+    border-radius: 8px;
+    color: var(--btn-txt-color);
+    background-color: var(--btn-bg);
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+a:hover {
+    border-radius: 10px;
+}
+
+.form-input:is(:focus, :valid) {
+    box-shadow: 0 3px 4px #8a8787;
+}
+
+.form-input:is(:focus) {
+    border: 2px solid var(--border);
+}
+
+.form-div {
+    margin-bottom: 1.3rem;
+}
+
+.form-input {
+    width: 100%;
+    height: 4rem;
+    border-radius: 8px;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    background-color: var(--input-bg);
+    border: 0 none black;
+    outline: none;
+    color: var(--text-color2);
+}
+
+/* -------- Loader ---------- */
 .loader {
     position: fixed;
     top: 0;
@@ -33,7 +95,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(114, 0, 114);
+    background-color: var(--loader-bg);
     transition: opacity 2s, visibility 2.8s;
     text-transform: uppercase;
     color: white;
@@ -49,20 +111,20 @@
     animation: loader 1.5s ease;
 }
 
+/* -------- Main index ------- */
 .main-title {
     margin-top: 4rem;
     text-align: center;
 }
 
 .title1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     letter-spacing: .15rem;
-    /* font-family: "Roboto Slab", serif; */
     font-family: "Mochiy Pop One", sans-serif;
 }
 
 .title-small {
-    font-size: .8rem;
+    font-size: .9rem;
     margin-top: .5rem;
 }
 
@@ -71,136 +133,102 @@
 }
 
 .header-img {
-    height: 10rem;
+    height: 8rem;
+    filter: brightness(-10rem);
+    filter: contrast(-2px);
+    filter: drop-shadow(100px);
 }
 
-body {
-    background: linear-gradient(var(--trial1),
-            var(--trial2),
-            var(--trial3));
-    margin: 1.5rem 1rem 0;
-    color: var(--text-color1);
-    font-family: "Roboto", sans-serif;
-    scroll-behavior: smooth;
-    height: 100svh;
+.index-btn-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0 0;
+    padding: 0;
+    gap: 1.5rem;
 }
+
+.index-btn {
+    height: 4rem;
+    font-size: 1.2rem;
+    width: 18rem;
+}
+
+/* -------HEADER -------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+
+/* ------LOG IN -------- */
 
 .Top-div {
     text-align: center;
-    margin: 4rem 0 3rem;
+    margin: 2rem 0 3rem;
 }
 
 .p1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    letter-spacing: .12rem;
+    letter-spacing: .2rem;
 }
 
 .p2 {
-    padding: 1rem 0 1.5rem;
-    font-size: 1rem;
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
 }
 
-.form-input:iinput:is(:focus, :valid) {
-    box-shadow: 0 4px 6px #8a8787;
-}
-
-.form-div {
-    margin-bottom: 1.3rem;
-}
-
-.form-input {
+.wide-btn {
     width: 100%;
-    height: 3.5rem;
-    border-radius: 8px;
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    background-color: var(--background2);
-    border: 0 none black;
-    outline: none;
-    color: var(--text-color2);
-}
-
-.form-input:is(:focus) {
-    border: 2px solid var(--border);
+    font-size: 1.2rem;
 }
 
 .forget {
-    padding-top: .5rem;
-    font-size: .8rem;
+    padding-top: 1rem;
+    font-size: 1rem;
     text-align: end;
     color: var(--border);
 }
 
-.a {
-    color: var(--btn-color);
-    list-style: none;
-    text-decoration: none;
-}
-
-.a:hover {
-    background-color: var(--background3);
-    color: var(--btn-color);
-    border-radius: 10px;
-}
-
-.btn {
-    font-size: 1rem;
+.else-div {
+    margin-top: 2rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 2.5rem auto 5rem;
-    letter-spacing: .15rem;
-    height: 2.5rem;
-    border-radius: 8px;
-    background-color: var(--background3);
 }
 
-.or>p {
-    margin: 2rem 0 0;
-    text-align: center;
-    font-size: .9rem;
+.or {
+    font-size: 1.1rem;
 }
 
 .icon {
     display: flex;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
-}
-
-.icon>a {
-    font-size: .8rem;
-    color: var(--background3);
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .icon-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 20px;
     width: 10rem;
-    height: 2.5rem;
-    border: 1px solid var(--background3);
-}
-
-.icon-list>i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1rem;
     font-size: 1rem;
+    height: 2.5rem;
+    background-color: var(--btn-txt-color);
+    border: 1px solid var(--btn-bg);
 }
 
 .dont-have {
-    margin-top: 3rem;
-    text-align: center;
-    font-size: .8rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
 }
 
 .dont-have-a {
-    color: var(--background3);
+    color: var(--btn-bg);
+    text-decoration: underline;
 }
 
 /* Index CSS */
@@ -225,23 +253,6 @@ body {
 
 .writeup-div>p {
     padding-bottom: .5rem;
-}
-
-.div-btn {
-    margin-top: 20%;
-    padding: 1rem 0 0;
-}
-
-.home-btn {
-    margin: 1rem 0 0;
-    height: 3rem;
-    font-size: 1.1rem;
-}
-
-.header-p {
-    margin: 3rem 0 2rem;
-    font-size: 1.8rem;
-    font-weight: 600;
 }
 
 .about-div>p {
@@ -323,4 +334,57 @@ body {
 option {
     font-size: .5rem;
     font-weight: 100;
+}
+
+/* ------ Profile ------- */
+.pf-top {
+    margin: 3rem 0 1rem;
+    padding: 0;
+}
+
+.pf-header {
+    font-size: 1.8rem;
+}
+
+.pf-abt>p {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#pf-pic>input {
+    font-size: 1.1rem;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-div>label>span {
+    font-size: 1.3rem;
+}
+
+.pf-select>option {
+    transition: all 300ms;
+    font-size: .9rem;
+}
+
+.pf-wallet {
+    width: 17rem;
+    margin-bottom: 1rem;
+}
+
+.checked {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.checked>input {
+    height: 1.2rem;
+    width: 1.2rem;
 }
